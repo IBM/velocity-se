@@ -32,7 +32,7 @@ services:
       - mongodb:/data/db
 
   reporting-ui:
-    image: ibmcom/velocity-se-reporting-ui:1.0.54
+    image: ibmcom/velocity-se-reporting-ui:1.0.55
     depends_on:
       security-api:
         condition: service_healthy
@@ -107,7 +107,7 @@ services:
       - BEARER_TOKEN=${API_TOKEN}
 
   release-events-ui:
-    image: ibmcom/velocity-se-release-events-ui:1.0.140
+    image: ibmcom/velocity-se-release-events-ui:1.0.144
     depends_on:
       release-events-api:
         condition: service_started
@@ -186,7 +186,7 @@ services:
     depends_on:
       security-api:
         condition: service_healthy
-    image: ibmcom/velocity-se-continuous-release-ui:1.0.131
+    image: ibmcom/velocity-se-continuous-release-ui:1.0.133
     links:
       - database
       - rabbitnode1
@@ -316,7 +316,7 @@ services:
     links:
       - security-api
       - multi-app-pipeline-api
-    image: ibmcom/velocity-se-multi-app-pipeline-ui:1.0.65
+    image: ibmcom/velocity-se-multi-app-pipeline-ui:1.0.66
     environment:
       - PORT=3030
       - NODE_TLS_REJECT_UNAUTHORIZED=0
