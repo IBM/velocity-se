@@ -32,7 +32,7 @@ services:
       - mongodb:/data/db
 
   reporting-ui:
-    image: ibmcom/velocity-se-reporting-ui:1.0.53
+    image: ibmcom/velocity-se-reporting-ui:1.0.54
     depends_on:
       security-api:
         condition: service_healthy
@@ -55,7 +55,7 @@ services:
       - VELOCITY_VERSION=${VELOCITY_VERSION}
 
   reporting-consumer:
-    image: ibmcom/velocity-se-reporting-consumer:1.0.25
+    image: ibmcom/velocity-se-reporting-consumer:1.0.28
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:6004/ping"]
       interval: 5s
@@ -73,7 +73,7 @@ services:
       - NODE_TLS_REJECT_UNAUTHORIZED=0
 
   continuous-release-consumer:
-    image: ibmcom/velocity-se-continuous-release-consumer:1.0.159
+    image: ibmcom/velocity-se-continuous-release-consumer:1.0.160
     links:
       - rabbitnode1
     environment:
@@ -85,7 +85,7 @@ services:
       - AMQP_URL=amqp://${RABBITMQ_USER}:${RABBITMQ_PASS}@rabbitnode1:5672/
 
   reporting-sync-api:
-    image: ibmcom/velocity-se-reporting-sync-api:1.0.24
+    image: ibmcom/velocity-se-reporting-sync-api:1.0.26
     links:
       - rabbitnode1
     environment:
@@ -95,7 +95,7 @@ services:
       - AMQP_URL=amqp://${RABBITMQ_USER}:${RABBITMQ_PASS}@rabbitnode1:5672/
 
   application-api:
-    image: ibmcom/velocity-se-application-api:1.0.317
+    image: ibmcom/velocity-se-application-api:1.0.319
     links:
       - database
     environment:
@@ -107,7 +107,7 @@ services:
       - BEARER_TOKEN=${API_TOKEN}
 
   release-events-ui:
-    image: ibmcom/velocity-se-release-events-ui:1.0.128
+    image: ibmcom/velocity-se-release-events-ui:1.0.140
     depends_on:
       release-events-api:
         condition: service_started
@@ -121,7 +121,7 @@ services:
       - version=${VELOCITY_VERSION}
 
   release-events-api:
-    image: ibmcom/velocity-se-release-events-api:1.0.156
+    image: ibmcom/velocity-se-release-events-api:1.0.161
     depends_on:
       security-api:
         condition: service_healthy
@@ -158,7 +158,7 @@ services:
       - REPORTING_UI_URL=http://reporting-ui/reports
 
   security-api:
-    image: ibmcom/velocity-se-security-api:1.0.40
+    image: ibmcom/velocity-se-security-api:1.0.45
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3911/api/v1/status"]
       interval: 5s
@@ -186,7 +186,7 @@ services:
     depends_on:
       security-api:
         condition: service_healthy
-    image: ibmcom/velocity-se-continuous-release-ui:1.0.128
+    image: ibmcom/velocity-se-continuous-release-ui:1.0.131
     links:
       - database
       - rabbitnode1
@@ -260,7 +260,7 @@ services:
     command:  bash -c 'sleep 10; rabbitmq-server;'
 
   multi-app-pipeline-api:
-    image: ibmcom/velocity-se-multi-app-pipeline-api:1.0.67
+    image: ibmcom/velocity-se-multi-app-pipeline-api:1.0.69
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9090/v1/multi-app-pipeline/status"]
       interval: 5s
@@ -316,7 +316,7 @@ services:
     links:
       - security-api
       - multi-app-pipeline-api
-    image: ibmcom/velocity-se-multi-app-pipeline-ui:1.0.59
+    image: ibmcom/velocity-se-multi-app-pipeline-ui:1.0.65
     environment:
       - PORT=3030
       - NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -332,7 +332,7 @@ services:
     depends_on:
       security-api:
         condition: service_healthy
-    image: ibmcom/velocity-se-issues_service:1.0.77
+    image: ibmcom/velocity-se-issues_service:1.0.78
     environment:
       - MONGO_DB=issue-tracking
       - MONGO_URL=mongodb://database:27017
@@ -342,7 +342,7 @@ services:
   continuous-release-poller:
     links:
       - application-api
-    image: ibmcom/velocity-se-continuous-release-poller:1.0.12
+    image: ibmcom/velocity-se-continuous-release-poller:1.0.13
     environment:
       - MONGO_URL=mongodb://database:27017/velocity
       - APP_API_TOKEN=${API_TOKEN}
