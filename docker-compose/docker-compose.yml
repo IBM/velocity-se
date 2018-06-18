@@ -297,6 +297,7 @@ services:
       - releaseEventsApi__cipherKey=${CIPHER_KEY}
       - releaseEventsApi__hmacKey=${HMAC_KEY}
       - releaseEventsApi__url=http://release-events-api:8080/graphql
+      - amqp__enabled=false
       - amqp__host=rabbitnode1
       - amqp__port=5672
       - amqp__path=
