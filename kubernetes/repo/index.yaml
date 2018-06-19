@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   rabbitmq:
   - appVersion: 3.7.5
-    created: 2018-06-19T09:31:12.141318-04:00
+    created: 2018-06-19T10:09:55.776422-04:00
     description: Open source message broker software that implements the Advanced
       Message Queuing Protocol (AMQP)
     digest: 545d5435d055166786d502cf321bc903ed0302a463f8dc211a9f26a91420f723
@@ -24,11 +24,11 @@ entries:
     version: 1.1.5
   velocity:
   - apiVersion: v1
-    created: 2018-06-19T09:31:12.142524-04:00
+    created: 2018-06-19T10:09:55.777933-04:00
     description: Deploys UrbanCode Velocity
-    digest: dbbf548d2782d03d546abed6b89586436e0d1355cdb79f402cec3b6800b5bdc3
+    digest: 4e9f02b64b3af8c6977ce834cd4672f1dcc5ea778482044a826d1f0e14dc12ed
     name: velocity
     urls:
     - https://raw.githubusercontent.com/IBM/velocity-se/master/kubernetes/repo/velocity-1.0.0.tgz
     version: 1.0.0
-generated: 2018-06-19T09:31:12.13609-04:00
+generated: 2018-06-19T10:09:55.771486-04:00

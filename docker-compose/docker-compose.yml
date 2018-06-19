@@ -42,7 +42,7 @@ services:
         max-file: "2"
 
   reporting-ui:
-    image: ibmcom/velocity-se-reporting-ui:1.0.55
+    image: ibmcom/velocity-se-reporting-ui:1.0.58
     depends_on:
       security-api:
         condition: service_healthy
