@@ -203,7 +203,7 @@ services:
         max-file: "2"
 
   security-api:
-    image: ibmcom/velocity-se-security-api:1.0.45
+    image: ibmcom/velocity-se-security-api:1.0.47
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3911/api/v1/status"]
       interval: 5s
