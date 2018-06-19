@@ -142,7 +142,7 @@ services:
         max-file: "2"
 
   release-events-ui:
-    image: ibmcom/velocity-se-release-events-ui:1.0.144
+    image: ibmcom/velocity-se-release-events-ui:1.0.150
     depends_on:
       release-events-api:
         condition: service_started
