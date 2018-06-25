@@ -161,7 +161,7 @@ services:
         max-file: "2"
 
   release-events-api:
-    image: ibmcom/velocity-se-release-events-api:1.0.161
+    image: ibmcom/velocity-se-release-events-api:1.0.163
     depends_on:
       security-api:
         condition: service_healthy
@@ -320,7 +320,7 @@ services:
         max-file: "2"
 
   multi-app-pipeline-api:
-    image: ibmcom/velocity-se-multi-app-pipeline-api:1.0.69
+    image: ibmcom/velocity-se-multi-app-pipeline-api:1.0.70
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9090/v1/multi-app-pipeline/status"]
       interval: 5s
