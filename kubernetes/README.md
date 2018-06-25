@@ -42,6 +42,7 @@
   $ helm install \
     --set access.key=<access_key> \
     --set url.domain=<hostname> \
+    --set url.nodePort=32443 \
     --set mongo.url=mongodb://mongo:mongo@velocity-mongo-ibm-mongodb-dev:27017/admin \
     --set rabbitmq.url=amqp://rabbit:carrot@velocity-rabbitmq:5672/ \
     --name v2 urbancode-se/velocity
