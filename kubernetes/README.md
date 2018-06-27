@@ -59,6 +59,8 @@ Parameter                     | Description
 access.key                    | This field is pre-populated with a valid access key.
 url.protocol                  | `https` https only
 url.domain                    | This is usually the hostname of your Kubernetes master node or ingress hostname. <br/>  If you have any reverse proxy in front of your Kubernetes cluster, that becomes your domain. <br/>
+url.port                      | `32443` Usually same as same as `url.nodePort`. <br/>  If you have any reverse proxy in front of your kubernetes cluster, use that port number for url.port <br/>
+url.nodePort                  | `32443` The NodePort on which Velocity will be accessible outside the cluster.
 apitoken                      | A random string or a GUID that is used verify the the authenticity of API calls and data.
 ciphertoken                   | 32-byte Hex that is used verify the the authenticity of API calls and data.
 hmackey                       | 32-byte Hex that is used verify the the authenticity of API calls and data.
