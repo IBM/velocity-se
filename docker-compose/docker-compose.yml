@@ -57,7 +57,7 @@ services:
       - ENCRYPT_KEY=${CIPHER_KEY}
       - ADMIN_PASSWORD=admin
       - DISABLE_SSL=true
-      - COMPOSE_VERSION=1.0.1
+      - COMPOSE_VERSION=1.0.2
       - LOG_LEVEL=${LOG_LEVEL}
       - JWT_HMAC_KEY=${HMAC_KEY}
       - SECURITY_AUTH_URL=${NGINX_PROTOCOL}://${NGINX_HOST}:${NGINX_PORT}/security-api/auth
