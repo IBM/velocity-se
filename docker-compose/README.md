@@ -33,9 +33,9 @@
 1. Download the docker compose installer on the server/VM where Velocity should be running.
 
     ```sh
-    $ wget https://github.com/IBM/velocity-se/releases/download/1.0.0/velocity-se-1-0-0-docker-compose.tar.gz
-    $ tar -xvzf velocity-se-1-0-0-docker-compose.tar.gz
-    $ cd velocity-se-1-0-0-docker-compose
+    $ wget https://github.com/IBM/velocity-se/releases/download/1.0.1/velocity-se-1-0-1-docker-compose.tar.gz
+    $ tar -xvzf velocity-se-1-0-1-docker-compose.tar.gz
+    $ cd velocity-se-1-0-1-docker-compose
     ```
 
 2. Open the `.env` file in your editor and set the required environment variables.
