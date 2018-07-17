@@ -57,7 +57,7 @@ services:
       - ENCRYPT_KEY=${CIPHER_KEY}
       - ADMIN_PASSWORD=admin
       - DISABLE_SSL=true
-      - COMPOSE_VERSION=1.0.0
+      - COMPOSE_VERSION=1.0.1
       - LOG_LEVEL=${LOG_LEVEL}
       - JWT_HMAC_KEY=${HMAC_KEY}
       - SECURITY_AUTH_URL=${NGINX_PROTOCOL}://${NGINX_HOST}:${NGINX_PORT}/security-api/auth
@@ -125,7 +125,7 @@ services:
         max-file: "2"
 
   application-api:
-    image: ibmcom/velocity-se-application-api:1.0.319
+    image: ibmcom/velocity-se-application-api:1.0.323
     links:
       - database
     environment:
