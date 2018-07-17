@@ -125,7 +125,7 @@ services:
         max-file: "2"
 
   application-api:
-    image: ibmcom/velocity-se-application-api:1.0.323
+    image: ibmcom/velocity-se-application-api:1.0.324
     links:
       - database
     environment:
