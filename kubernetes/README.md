@@ -3,7 +3,7 @@
 ## Pre-requisite
 
 - Kubernetes 1.7+ with Beta APIs enabled
-- Helm v2.6  (version might vary, which ever is compatible with your Kuberetes cluster).
+- Helm v2.6  (version might vary, which ever is compatible with your Kubernetes cluster).
 
 ## Installing the Chart and images
 
