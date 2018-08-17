@@ -42,7 +42,7 @@ services:
         max-file: "2"
 
   reporting-ui:
-    image: ibmcom/velocity-se-reporting-ui:1.0.58
+    image: ibmcom/velocity-se-reporting-ui:1.0.66
     depends_on:
       security-api:
         condition: service_healthy
@@ -70,7 +70,7 @@ services:
         max-file: "2"
 
   reporting-consumer:
-    image: ibmcom/velocity-se-reporting-consumer:1.0.33
+    image: ibmcom/velocity-se-reporting-consumer:1.0.34
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:6004/ping"]
       interval: 5s
@@ -93,7 +93,7 @@ services:
         max-file: "2"
 
   continuous-release-consumer:
-    image: ibmcom/velocity-se-continuous-release-consumer:1.0.160
+    image: ibmcom/velocity-se-continuous-release-consumer:1.0.163
     links:
       - rabbitnode1
     environment:
@@ -110,7 +110,7 @@ services:
         max-file: "2"
 
   reporting-sync-api:
-    image: ibmcom/velocity-se-reporting-sync-api:1.0.26
+    image: ibmcom/velocity-se-reporting-sync-api:1.0.27
     links:
       - rabbitnode1
     environment:
@@ -142,7 +142,7 @@ services:
         max-file: "2"
 
   release-events-ui:
-    image: ibmcom/velocity-se-release-events-ui:1.0.151
+    image: ibmcom/velocity-se-release-events-ui:1.0.172
     depends_on:
       release-events-api:
         condition: service_started
@@ -161,7 +161,7 @@ services:
         max-file: "2"
 
   release-events-api:
-    image: ibmcom/velocity-se-release-events-api:1.0.163
+    image: ibmcom/velocity-se-release-events-api:1.0.173
     depends_on:
       security-api:
         condition: service_healthy
@@ -203,7 +203,7 @@ services:
         max-file: "2"
 
   security-api:
-    image: ibmcom/velocity-se-security-api:1.0.47
+    image: ibmcom/velocity-se-security-api:1.0.54
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3911/api/v1/status"]
       interval: 5s
@@ -236,7 +236,7 @@ services:
     depends_on:
       security-api:
         condition: service_healthy
-    image: ibmcom/velocity-se-continuous-release-ui:1.0.133
+    image: ibmcom/velocity-se-continuous-release-ui:1.0.147
     links:
       - database
       - rabbitnode1
@@ -320,7 +320,7 @@ services:
         max-file: "2"
 
   multi-app-pipeline-api:
-    image: ibmcom/velocity-se-multi-app-pipeline-api:1.0.70
+    image: ibmcom/velocity-se-multi-app-pipeline-api:1.0.87
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9090/v1/multi-app-pipeline/status"]
       interval: 5s
@@ -382,7 +382,7 @@ services:
     links:
       - security-api
       - multi-app-pipeline-api
-    image: ibmcom/velocity-se-multi-app-pipeline-ui:1.0.68
+    image: ibmcom/velocity-se-multi-app-pipeline-ui:1.0.75
     environment:
       - PORT=3030
       - NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -403,7 +403,7 @@ services:
     depends_on:
       security-api:
         condition: service_healthy
-    image: ibmcom/velocity-se-issues_service:1.0.78
+    image: ibmcom/velocity-se-issues_service:1.0.81
     environment:
       - MONGO_DB=issue-tracking
       - MONGO_URL=mongodb://database:27017
@@ -418,7 +418,7 @@ services:
   continuous-release-poller:
     links:
       - application-api
-    image: ibmcom/velocity-se-continuous-release-poller:1.0.13
+    image: ibmcom/velocity-se-continuous-release-poller:1.0.15
     environment:
       - MONGO_URL=mongodb://database:27017/velocity
       - APP_API_TOKEN=${API_TOKEN}
