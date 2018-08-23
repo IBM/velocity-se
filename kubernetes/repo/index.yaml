@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   rabbitmq:
   - appVersion: 3.7.5
-    created: 2018-08-17T16:36:23.911393954-04:00
+    created: 2018-08-23T13:37:41.191085571-04:00
     description: Open source message broker software that implements the Advanced
       Message Queuing Protocol (AMQP)
     digest: 545d5435d055166786d502cf321bc903ed0302a463f8dc211a9f26a91420f723
@@ -24,7 +24,15 @@ entries:
     version: 1.1.5
   velocity:
   - apiVersion: v1
-    created: 2018-08-17T16:36:23.918112521-04:00
+    created: 2018-08-23T13:37:41.197549819-04:00
+    description: Deploys UrbanCode Velocity
+    digest: 8b5226c4b21645e518b07c1b163be3e50cb044f3ee8159b7b3787152e207f4fd
+    name: velocity
+    urls:
+    - https://raw.githubusercontent.com/IBM/velocity-se/master/kubernetes/repo/velocity-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    created: 2018-08-23T13:37:41.19690933-04:00
     description: Deploys UrbanCode Velocity
     digest: ad8913af6b422a743c716747e20c970810a6391cca6df4221b5ac66845372cc1
     name: velocity
@@ -32,7 +40,7 @@ entries:
     - https://raw.githubusercontent.com/IBM/velocity-se/master/kubernetes/repo/velocity-1.0.3.tgz
     version: 1.0.3
   - apiVersion: v1
-    created: 2018-08-17T16:36:23.91657247-04:00
+    created: 2018-08-23T13:37:41.195477026-04:00
     description: Deploys UrbanCode Velocity
     digest: ffcf336feed26030db092b41bb2b0b0657f5a8f2502383832aac992318027fdc
     name: velocity
@@ -40,7 +48,7 @@ entries:
     - https://raw.githubusercontent.com/IBM/velocity-se/master/kubernetes/repo/velocity-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v1
-    created: 2018-08-17T16:36:23.916013378-04:00
+    created: 2018-08-23T13:37:41.194168895-04:00
     description: Deploys UrbanCode Velocity
     digest: e0842b25d37099579fc9ddc6629717952fb0e5490936fc454381d8abda3f06f3
     name: velocity
@@ -48,11 +56,11 @@ entries:
     - https://raw.githubusercontent.com/IBM/velocity-se/master/kubernetes/repo/velocity-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
-    created: 2018-08-17T16:36:23.915371836-04:00
+    created: 2018-08-23T13:37:41.192404669-04:00
     description: Deploys UrbanCode Velocity
     digest: 41efb77f46b5386585dc4cfcbb1f64214bbc88dfb5b32a6c7419ed99fbee6087
     name: velocity
     urls:
     - https://raw.githubusercontent.com/IBM/velocity-se/master/kubernetes/repo/velocity-1.0.0.tgz
     version: 1.0.0
-generated: 2018-08-17T16:36:23.909189208-04:00
+generated: 2018-08-23T13:37:41.189246085-04:00
