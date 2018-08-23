@@ -357,13 +357,9 @@ services:
       - releaseEventsApi__cipherKey=${CIPHER_KEY}
       - releaseEventsApi__hmacKey=${HMAC_KEY}
       - releaseEventsApi__url=http://release-events-api:8080/graphql
-      - amqp__enabled=false
-      - amqp__host=rabbitnode1
-      - amqp__port=5672
-      - amqp__path=
-      - amqp__user=${RABBITMQ_USER}
-      - amqp__password=${RABBITMQ_PASS}
-      - amqp__protocol=amqp
+      - amqp__velocity__url=amqp://rabbitnode1:5672/
+      - amqp__velocity__password=${RABBITMQ_PASS}
+      - amqp__velocity__user=${RABBITMQ_USER}
       - newRelic__enabled=false
       - redis__enabled=false
       - tunnel__enabled=false
