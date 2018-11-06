@@ -3,7 +3,7 @@ LICENSE INFORMATION
 The Programs listed below are licensed under the following License Information terms and conditions in addition to the Program license terms previously agreed to by Client and IBM. If Client does not have previously agreed to license terms in effect for the Program, the International Program License Agreement (Z125-3301-14) applies.
 
 Program Name (Program Number):
-IBM UrbanCode Velocity v1.0.0.1 (5737-H22)
+IBM UrbanCode Velocity User v1.1 (5737-H22)
 
 The following standard terms apply to Licensee's use of the Program.
 
@@ -25,9 +25,9 @@ Floating User
 
 Floating User is a unit of measure by which the Program can be licensed. A Floating User is a person who is accessing the Program at any particular point in time. An Install is an installed copy of the Program on a physical or virtual disk made available to be executed on a computer. The Program may be installed on any number of computers or servers, but if the Floating User simultaneously accesses more than one Install of the Program, the Floating User requires a separate entitlement for each such Install. Licensee must obtain separate entitlements for each Floating User simultaneously accessing the Program on each Install in any manner directly or indirectly (for example: via a multiplexing program, device, or application server) through any means.
 
-L/N:  L-PASH-AZXNNV
-D/N:  L-PASH-AZXNNV
-P/N:  L-PASH-AZXNNV
+L/N:  L-PASH-B3NKCV
+D/N:  L-PASH-B3NKCV
+P/N:  L-PASH-B3NKCV
 
 
 International Program License Agreement
@@ -739,3 +739,5 @@ b. special, incidental, exemplary, or indirect damages or consequential damages;
 c. wasted management time or lost profits, business, revenue, goodwill, or anticipated savings.
 
 Z125-3301-14 (07/2011)
+
+
